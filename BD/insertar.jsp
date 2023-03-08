@@ -2,6 +2,8 @@
 <%@ page import="java.sql.Statement"%>
 <%@ page import="java.sql.DriverManager"%>
 <%@ page import="java.sql.SQLException"%>
+<%@ page import="java.util.Date,java.text.SimpleDateFormat,java.text.ParseException"%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,15 +15,15 @@
 <body>
 
 <%
-String cedula =  request.getParameter("documento");
+int cedula =  Integer.parseInt(request.getParameter("Documento"));
 String  Tipo_doc=  request.getParameter("Tipo");
 String Expedicion_ced =  request.getParameter("Expedicion_ced");
 String Nombre =  request.getParameter("Nombre");
 String Apellido=  request.getParameter("Apellido");
 String Correo =  request.getParameter("Correo");
-String Telefono =  request.getParameter("Telefono");
+String telefono =  request.getParameter("Telefono")	;
 String password =  request.getParameter("password");
-String fecha_nac =  request.getParameter("Fecha_nac");
+String fecha_nac =  request.getParameter("fecha_nac");
 String afiliacion=  request.getParameter("Afiliacion");
 
 Connection conexion = null;
@@ -38,11 +40,11 @@ Connection conexion = null;
 
 		sentencia = conexion.createStatement();
 
-		String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellidos,Correo,Telefono,password,Fecha_Nac,Expediccion_ced,Tipos_Afiliacion ) values ";
-		consultaSQL += "('" + cedula + "','" + Tipo_doc +"','"+Expediccion_ced+"','"+Nombre+"','"+Apellido+"','"+Correo+"','"+Telefono+"','"+password+"','"+fecha_Nac+"','" + afiliacion +"')";
+		String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellido,Correo,Telefono,password,Fecha_Nac,Expediccion_Ced,Tipos_Afiliacion ) values ";
+		consultaSQL += "('" + cedula + "','" + Tipo_doc +"','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','" + afiliacion +"')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
-%><script>alert(<%out.println("se guardo el registro correctamente")%>);</script><%
+%><script>alert(<%out.println("se guardo el registro correctamente");%>);</script><%
 		 response.sendRedirect("../index.html");
 
 	} catch (ClassNotFoundException e) {
