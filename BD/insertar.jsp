@@ -15,7 +15,8 @@
 <body>
 
 <%
-int cedula =  Integer.parseInt(request.getParameter("Documento"));
+
+String cedula =  request.getParameter("Documento");
 String  Tipo_doc=  request.getParameter("Tipo");
 String Expedicion_ced =  request.getParameter("Expedicion_ced");
 String Nombre =  request.getParameter("Nombre");
@@ -26,8 +27,9 @@ String password =  request.getParameter("password");
 String fecha_nac =  request.getParameter("fecha_nac");
 String afiliacion=  request.getParameter("Afiliacion");
 
-Connection conexion = null;
-	Statement sentencia = null;
+Connection conexion=null;
+Statement  sentencia=null;
+ResultSet rs=null;
 	
 	int filas=0;
 	try {
@@ -44,7 +46,6 @@ Connection conexion = null;
 		consultaSQL += "('" + cedula + "','" + Tipo_doc +"','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','" + afiliacion +"')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
-%><script>alert(<%out.println("se guardo el registro correctamente");%>);</script><%
 		 response.sendRedirect("../index.html");
 
 	} catch (ClassNotFoundException e) {
