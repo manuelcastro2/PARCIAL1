@@ -2,18 +2,6 @@
 <%@ page import="java.sql.Statement"%>
 <%@ page import="java.sql.DriverManager"%>
 <%@ page import="java.sql.SQLException"%>
-<%@ page import="java.util.Date,java.text.SimpleDateFormat,java.text.ParseException"%>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insertar</title>
-</head>
-<body>
-
 <%
 
 String cedula =  request.getParameter("Documento");
@@ -29,21 +17,18 @@ String afiliacion=  request.getParameter("Afiliacion");
 
 Connection conexion=null;
 Statement  sentencia=null;
-ResultSet rs=null;
 	
 	int filas=0;
 	try {
 
 		Class.forName("com.mysql.jdbc.Driver");
 
-	conexion = DriverManager.getConnection(
-				"jdbc:mysql://localhost/parcial", "root",
-				"");
+	conexion = DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
 
 		sentencia = conexion.createStatement();
 
 		String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellido,Correo,Telefono,password,Fecha_Nac,Expediccion_Ced,Tipos_Afiliacion ) values ";
-		consultaSQL += "('" + cedula + "','" + Tipo_doc +"','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','" + afiliacion +"')";
+		consultaSQL += "('" + cedula + "','" + Tipo_doc + "','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','"+afiliacion+"')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
 		 response.sendRedirect("../index.html");
@@ -77,5 +62,3 @@ ResultSet rs=null;
 		}
 	}
 %>
-</body>
-</html>

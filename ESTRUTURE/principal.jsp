@@ -32,16 +32,18 @@ try  {
 	 
 	 %><div><table > <tr >
 	 <td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar</td><td>Eliminar</td>
+	 <td>Asignar cita</td><td>Asignar examen</td>
 	 </tr><%
 	 while(rs.next()) { %>
-	 	 
 		<tr><td><%=rs.getString("Documento")%></td>
 		  <td><%=rs.getString("tipo_doc")%></td>
 		  <td><%=rs.getString("Nombre")%></td>
 		  <td><%=rs.getString("Apellido")%></td>
 		  <td><%=rs.getString("Tipos_Afiliacion")%></td>
 		<td><a href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>" >Actualizar</a></td>
-		<td><a href="eliminar.jsp?Documento=<%=rs.getInt("Documento")%>" >Eliminar</a></td>
+		<td><a href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>" >eliminar</a></td>
+		<td><a href="../BD/asignarcitas.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar cita</a></td>
+		<td><a href="../BD/asignarexamenes.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar examen</a></td>
 
 	<% }%></tr></table><%
 
