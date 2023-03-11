@@ -42,9 +42,9 @@ try  {
 		  <td><%=rs.getString("Tipos_Afiliacion")%></td>
 		<td><a href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>" >Actualizar</a></td>
 		<td><a href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>" >eliminar</a></td>
-		<td><a href="../BD/asignarcitas.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar cita</a></td>
-		<td><a href="../BD/asignarexamenes.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar examen</a></td>
-
+		<td><a href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar cita</a></td>
+		<td><a href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar examen</a></td>
+<td><a href="eliminarasignaciones.jsp?Documento=<%=rs.getString("Documento")%>" >Eliminar asignaciones</a></td>
 	<% }%></tr></table><%
 
 }catch (ClassNotFoundException e) {
