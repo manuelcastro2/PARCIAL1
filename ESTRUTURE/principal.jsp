@@ -3,82 +3,82 @@
 <%@ page import="java.sql.DriverManager"%>
 <%@ page import="java.sql.SQLException"%>
 <%@ page import="java.sql.*"%>
-<!DOCTYPE html>
-<html lang="en">
+					<!DOCTYPE html>
+					<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRINCIPAL</title>
-</head>
+						<head>
+							<meta charset="UTF-8">
+							<meta http-equiv="X-UA-Compatible" content="IE=edge">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<title>PRINCIPAL DATOS</title>
+						</head>
 
-<body>
-<% 
-Connection conexion=null;
-Statement  sentencia=null;
-ResultSet rs=null;
-try  {
-		Class.forName("com.mysql.jdbc.Driver");
+						<body>
+							<%
+								Connection conexion=null;
+								Statement sentencia=null;
+								ResultSet rs=null;
+								try {
+								Class.forName("com.mysql.jdbc.Driver");
 
-	conexion = DriverManager.getConnection(
-				"jdbc:mysql://localhost/parcial", "root",
-				"");
-	 sentencia= conexion.createStatement();
+								conexion= DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
+								sentencia= conexion.createStatement();
 
-	 String consultaSQL=  "select Documento,tipo_doc,Nombre, Apellido,Tipos_Afiliacion from usuarios";
+								String consultaSQL="select Documento,tipo_doc,Nombre,Apellido,Tipos_Afiliacion from usuarios";
+								rs=sentencia.executeQuery(consultaSQL);
 
-	 rs=sentencia.executeQuery(consultaSQL);
-	 
-	 %><div><table > <tr >
-	 <td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar</td><td>Eliminar</td>
-	 <td>Asignar cita</td><td>Asignar examen</td>
-	 </tr><%
-	 while(rs.next()) { %>
-		<tr><td><%=rs.getString("Documento")%></td>
-		  <td><%=rs.getString("tipo_doc")%></td>
-		  <td><%=rs.getString("Nombre")%></td>
-		  <td><%=rs.getString("Apellido")%></td>
-		  <td><%=rs.getString("Tipos_Afiliacion")%></td>
-		<td><a href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>" >Actualizar</a></td>
-		<td><a href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>" >eliminar</a></td>
-		<td><a href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar cita</a></td>
-		<td><a href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>" >Asignar examen</a></td>
-<td><a href="eliminarasignaciones.jsp?Documento=<%=rs.getString("Documento")%>" >Eliminar asignaciones</a></td>
-	<% }%></tr></table><%
+								%><div><table> <tr>
+											<td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar</td><td>Eliminar</td>
+											<td>Asignar cita</td><td>Asignar examen</td><td>Eliminar citas</td>
+										</tr><%
+											while(rs.next()) { %>
+											<tr><td><%=rs.getString("Documento")%></td>
+													<td><%=rs.getString("tipo_doc")%></td>
+														<td><%=rs.getString("Nombre")%></td>
+															<td><%=rs.getString("Apellido")%></td>
+																<td><%=rs.getString("Tipos_Afiliacion")%></td>
+																	<td><a href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Actualizar</a></td>
+																	<td><a href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>eliminar</a></td>
+																	<td><a href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Asignar cita</a></td>
+																	<td><a href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Asignar examen</a></td>
+																	<td><a href="eliminaracitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Eliminar citas</a></td>
+																	<% }%></tr></table><%
 
-}catch (ClassNotFoundException e) {
-	
-	out.println("Error en la carga del driver" 
-						+ e.getMessage());
-	
-}catch (SQLException e) {
-	
-	out.println("Error accediendo a la base de datos" 
-						+ e.getMessage());
-	
-}
- finally {
-	if (rs != null) {
+																	}catch (ClassNotFoundException e) {
 
-		try {rs.close();} catch (SQLException e)
-		{out.println("Error cerrando el resultset" + e.getMessage());}
-		
-	}
-	
-	if (sentencia != null) {
+																	out.println(" Error en la carga del driver"
+																	+ e.getMessage());
 
-		try {sentencia.close();} catch (SQLException e) 
-		{out.println("Error cerrando la sentencia" + e.getMessage());}
-		
-	}
-	if (conexion != null) {
+																	}catch (SQLException e) {
 
-		try {conexion.close();} catch (SQLException e) 
-		{out.println("Error cerrando la conexion" + e.getMessage());}
-	}
- }
-%>
-</body>
+																	out.println(" Error accediendo a la base de datos"
+																	+ e.getMessage());
 
-</html>
+																	}
+																	finally {
+																	if (rs != null) {
+
+																	try {rs.close();} catch (SQLException e)
+																	{out.println(" Error cerrando el resultset" + e.getMessage());}
+																	}
+
+																	if (sentencia != null) {
+
+																	try {sentencia.close();} catch (SQLException e)
+																	{out.println(" Error cerrando la sentencia" + e.getMessage());}
+																	}
+																	if (conexion != null) {
+
+																	try {conexion.close();} catch (SQLException e)
+																	{out.println(" Error cerrando la conexion" + e.getMessage());}
+																	}
+																	}
+																	%>
+																</body>
+
+															</html>
