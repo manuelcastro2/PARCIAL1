@@ -70,6 +70,7 @@
                                                             <td>
                                                                 <%=rs.getString("Ciudad")%>
                                                             </td>
+                                                            <td><a href="eliminaracitasMedicas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
                                                     </div>
                                                     <% }%>
                                                         </tr>

@@ -45,7 +45,7 @@
 																			>Asignar cita</a></td>
 																	<td><a href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Asignar examen</a></td>
-																	<td><a href="eliminaracitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
+																	<td><a href="vercitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Eliminar citas</a></td>
 																	<% }%></tr></table><%
 
