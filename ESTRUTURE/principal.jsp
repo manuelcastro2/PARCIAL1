@@ -28,8 +28,8 @@
 								rs=sentencia.executeQuery(consultaSQL);
 
 								%><div><table> <tr>
-											<td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar</td><td>Eliminar</td>
-											<td>Asignar cita</td><td>Asignar examen</td><td>Eliminar citas</td>
+											<td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar Datos</td><td>Eliminar Usuario</td>
+											<td>Asignar cita</td><td>Asignar examen</td><td>Eliminar citas</td><td>Eliminar examenes</td>
 										</tr><%
 											while(rs.next()) { %>
 											<tr><td><%=rs.getString("Documento")%></td>
@@ -47,6 +47,8 @@
 																			>Asignar examen</a></td>
 																	<td><a href="vercitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Eliminar citas</a></td>
+																	<td><a href="verExamenes.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Eliminar examenes</a></td>
 																	<% }%></tr></table><%
 
 																	}catch (ClassNotFoundException e) {

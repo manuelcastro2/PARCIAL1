@@ -14,8 +14,8 @@ conexion = DriverManager.getConnection(
 				"");
 sentencia= conexion.createStatement();
 PreparedStatement ps;
-String cedula =  request.getParameter("Documento");
-String consulta="delete from usuarios where Documento="+cedula;
+String ID =  request.getParameter("Asignacion");
+String consulta="delete from citas_medicas where Asignacion="+ID;
 filas=sentencia.executeUpdate(consulta);
 response.sendRedirect("principal.jsp");
 

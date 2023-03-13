@@ -12,7 +12,7 @@
                             <meta http-equiv="X-UA-Compatible" content="IE=edge">
                             <meta name="viewport" content="width=device-width,
                                     initial-scale=1.0">
-                            <title>ELIMINAR CITAS</title>
+                            <title>ELIMINAR EXAMENES</title>
                         </head>
 
                         <body>
@@ -25,7 +25,7 @@
                                 sentencia=conexion.createStatement(); 
                                 PreparedStatement ps; 
                                 String cedula=request.getParameter("Documento");
-                                 String consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
+                                 String consulta="select Asignacion,Fecha_Examen,Tipo_Examen,Hora,Ciudad from citas_examenes where Ced=" +cedula;
                                   rs=sentencia.executeQuery(consulta);
                                    %>
                                 <div>
@@ -33,8 +33,8 @@
                                         <tr>
                                             <td>ID</td>
                                             <td>Fecha cita</td>
-                                            <td>Tipo de cita </td>
-                                            <td>Hora cita</td>
+                                            <td>Tipo de Examen </td>
+                                            <td>Hora Examen</td>
                                             <td>Ciudad</td>
                                         </tr>
                                         <div>
@@ -59,10 +59,10 @@
                                                                 <%=rs.getString("Asignacion")%>
                                                             </td>
                                                             <td>
-                                                                <%=rs.getString("Fehca_cita")%>
+                                                                <%=rs.getString("Fecha_Examen")%>
                                                             </td>
                                                             <td>
-                                                                <%=rs.getString("Tipo_cita")%>
+                                                                <%=rs.getString("Tipo_Examen")%>
                                                             </td>
                                                             <td>
                                                                 <%=rs.getString("Hora")%>
@@ -70,7 +70,7 @@
                                                             <td>
                                                                 <%=rs.getString("Ciudad")%>
                                                             </td>
-                                                            <td><a href="eliminarcitas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
+                                                            <td><a href="eliminarexamenes.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
                                                     </div>
                                                     
                                                     <% }%>
