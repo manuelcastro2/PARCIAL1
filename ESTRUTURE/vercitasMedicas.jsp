@@ -12,7 +12,8 @@
                             <meta http-equiv="X-UA-Compatible" content="IE=edge">
                             <meta name="viewport" content="width=device-width,
                                     initial-scale=1.0">
-                            <title>ELIMINAR CITAS</title>
+                            <title>VER Y ELIMINACION DE CITAS</title>
+                            <link rel="stylesheet" href="../CSS/stylevercitas.css">
                         </head>
 
                         <body>
@@ -28,7 +29,26 @@
                                  String consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
                                   rs=sentencia.executeQuery(consulta);
                                    %>
+                                   
+                                <div class="contener-shadow">
                                 <div>
+                                    <a href="principal.jsp">Regresar</a>
+                                </div>
+                                   <div class="contener-mediun">
+                                    <div>
+                                        <label for="">
+                                            <h1>VER Y ELIMINAR CITAS</h1>
+                                        </label>
+                                    </div>
+                                        <div>
+                                            <label for="Documento">
+                                                <p>Documento</p>
+                                                <input type="text" placeholder="Digite
+                                                    Documento" name="Documento" id="Documento" disabled
+                                                value="<%out.println(cedula);%>">
+                                            </label>
+                                        </div>
+                                        <div class="contener-forward">
                                     <table>
                                         <tr>
                                             <td>ID</td>
@@ -37,23 +57,11 @@
                                             <td>Hora cita</td>
                                             <td>Ciudad</td>
                                         </tr>
-                                        <div>
-                                            <label for="">
-                                                <h1>REGISTRO</h1>
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label for="Documento">
-                                                <p>Documento</p>
-                                                <input type="text" placeholder="Digite
-                                                        Documento" name="Documento" id="Documento" disabled
-                                                    value="<%out.println(cedula);%>">
-                                            </label>
-                                        </div>
+                                       
                                         <div>
                                             <% while(rs.next()){ %>
                                                 <form action="" method="post">
-                                                    <div>
+                                                    
                                                         <tr>
                                                             <td>
                                                                 <%=rs.getString("Asignacion")%>
@@ -76,9 +84,9 @@
                                                     <% }%>
                                                         </tr>
                                     </table>
-                                    <div>
-                                                     <a href="principal.jsp">Regresar</a>
-                                                      </div>
+                                   </div>
+                                </div>
+                            </div>       
                                     </form>
                         </body>
 

@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIO DE SESION</title>
-</head>
-<body>
- <div>
- <form action="../BD/verificacion.jsp" method="post">
-            <div>
-                <div>
-                    <label for="">
-                        <h1>INICIO SESION</h1>
-                    </label>
-                </div>
-                <div>
-                    <label for="Usuario">
-                        <p>Usuario:</p>
-                        <input type="number" placeholder="Cedula" name="Usuario" id="Usuario">
-                    </label>
-                </div>
-                <div>
-                    <label for="password">
-                        <p>Contraseña:</p>
-                        <input type="password" placeholder="Contraseña" name="password" id="password">
-                    </label>
-                </div>
-                <div>
-			<button type="submit" id="inicio" name="inicio">iniciar sesion</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>INICIO DE SESION</title>
+        <link rel="stylesheet" href="../CSS/stylelogin.css">
+    </head>
+    <body>
+        <div>
+            <form action="../BD/verificacion.jsp" method="post">
+                <div class="contener-shadow">
+                    <div class="contener-mediun">
+                        <div>
+                            <label for="">
+                                <h1>INICIO SESION</h1>
+                            </label>
+                        </div>
+                        <div class="contener-forward">
+                            <div>
+                                <label for="Usuario">
+                                    <p>Usuario:</p>
+                                    <input type="number" placeholder="Cedula"
+                                        name="Usuario" id="Usuario">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="password">
+                                    <p>Contraseña:</p>
+                                    <input type="password"
+                                        placeholder="Contraseña" name="password"
+                                        id="password">
+                                </label>
+                            </div>
+                            <div>
+                                <button type="submit" id="inicio" name="inicio">iniciar
+                                    sesion</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-</form>
-</body>
+        </form>
+    </body>
 </html>

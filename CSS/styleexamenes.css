@@ -1,5 +1,5 @@
 body {
-    background-image: url(http://static.pulzo.com/images-resized/sa-1-1676070515-horizontal-original.jpg);
+    background-image: url(https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2021-03/col-covid-19-vaccination-2.jpg?itok=0R2Jk2gK);
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,34 +7,35 @@ body {
 .contener-shadow {
     background-color: #006691;
     border-radius: 15px;
-    max-width: 70%;
-    max-height: 300px;
+    max-width: 65%;
+    max-height: 450px;
     display: flex;
-    margin-top: 12%;
-    margin-left: 10%;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 50px;
     margin-bottom: auto;
     box-shadow: 5px 5px 50px 5px;
 }
 
 .contener-mediun {
     border-radius: 15px;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 450px;
     background-color: white;
-    margin-top: -70px;
-    margin-left: 410px;
+    margin-left: auto;
+    margin-top: -20px;
     margin-bottom: auto;
-    margin-right: auto;
+    margin-right: 30px;
     padding-bottom: 40px;
     box-shadow: 5px 5px 50px 5px;
 }
 
 .contener-forward {
-    margin-top: 20px;
+    margin-top: -25px;
     text-align: center;
     padding: 0 45px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,300px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
 }
 
 .contener-forward input {
@@ -46,6 +47,7 @@ body {
     transition: max-width 500ms;
     outline: 0 none;
 }
+
 
 .contener-forward input:focus {
     border: 1px solid #40cfff;
@@ -90,27 +92,60 @@ h1 {
     font-weight: 1000;
 }
 
-.contener-forward button{
-    margin-top: 10px;
-    margin-left: 0%;
-    margin-right: auto;
-    width: 100px;
-    padding: 7px;
+.contener-forward button {
     border-radius: 10px;
-    border: 1px solid #2499c7;
+    border: 1px solid #40cfff;
+    background-color: #2499c7;
     transition: border 500ms;
     transition: background-color 500ms;
     outline: 0 none;
-    font-weight: 540;
+    width: 100px;
+    padding: 7px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 60px;
 }
 
-.contener-forward button:hover{
-    background-color: #2499c7;
-    border: 1px solid #40cfff;
-    box-shadow: 0px 0px 10px 0px #2499c7;
-}
-.contener-forward button:focus{
-    background-color: #40cfff;
+.contener-forward button:hover {
+    background-color: white;
     border: 1px solid #2499c7;
-    box-shadow: 0px 0px 10px 0px #2499c7;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+
+contener-forward button:focus {
+    background-color: #2499c7;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+.button2 {
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #2499c7;
+    transition: border 500ms;
+    transition: background-color 500ms;
+    outline: 0 none;    
+    padding: 4px 15px;
+    font-weight: 450;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.button2 a{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+.button2:focus {
+    background-color: #2499c7;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+
+.button2:hover {
+    background-color: white;
+    border: 1px solid #2499c7;
+    box-shadow: 0px 0px 10px 0px #40cfff;
 }
