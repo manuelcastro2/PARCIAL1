@@ -1,6 +1,7 @@
 body {
-    background: url(https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2021-03/col-covid-19-vaccination-2.jpg?itok=0R2Jk2gK) no-repeat;
+    background-image: url(https://www.atenciondellamadas.net/wp-content/uploads/2022/01/gestion-de-citas-medicas.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;

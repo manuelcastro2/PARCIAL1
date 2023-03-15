@@ -1,19 +1,51 @@
 body {
     background-image: url(https://rtvc-informativo.s3.amazonaws.com/Diferencias_eps_1-1000x600.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
 .contener-shadow {
     background-color: #006691;
     border-radius: 15px;
-    max-width: 70%;
-    max-height: 300px;
-    display: flex;
-    margin-top: 12%;
-    margin-left: 25%;
-    margin-bottom: auto;
+    width: 900px;
+    height: 300px;
     box-shadow: 5px 5px 50px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contener-shadow .envio-inicio{
+font-weight: 500;
+margin-right: 80px;
+
+}
+
+.envio-inicio button{
+    margin-left: 30px;
+    width: 100px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #40cfff;
+    transition: border 500ms;
+    transition: background-color 500ms;
+    outline: 0 none;
+}
+
+.envio-inicio button:hover{
+    background-color: #40cfff;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+.envio-inicio button:focus{
+    background-color: #2499c7;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
 }
 
 .contener-mediun {

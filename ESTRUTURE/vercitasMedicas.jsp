@@ -74,7 +74,7 @@
                                                             <td>
                                                                 <%=rs.getString("Ciudad")%>
                                                             </td>
-                                                            <td><a class="botonenvio" href="eliminarcitas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
+                                                            <td><a class="botonenvio" href="eliminarcitas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Delete</a></td>
                                                     <% }%>
                                                         </tr>
                                     </table>

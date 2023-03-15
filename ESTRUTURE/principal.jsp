@@ -11,6 +11,9 @@
 							<meta http-equiv="X-UA-Compatible" content="IE=edge">
 							<meta name="viewport" content="width=device-width, initial-scale=1.0">
 							<title>PRINCIPAL DATOS</title>
+							<style>
+                               @import '../CSS/styleprincipal.css';
+                            </style>
 						</head>
 
 						<body>
@@ -27,7 +30,12 @@
 								String consultaSQL="select Documento,tipo_doc,Nombre,Apellido,Tipos_Afiliacion from usuarios";
 								rs=sentencia.executeQuery(consultaSQL);
 
-								%><div><table> <tr>
+								%><h1>DATOS DE LOS USUARIOS</h1>
+								<div class="contener-shadow">
+									<div class="contener-mediun">
+										<div class="contener-forward">
+											<table class="tabla"> 
+												<tr class="cabezado">
 											<td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar Datos</td><td>Eliminar Usuario</td>
 											<td>Asignar cita</td><td>Asignar examen</td><td>Eliminar citas</td><td>Eliminar examenes</td>
 										</tr><%
@@ -37,18 +45,17 @@
 														<td><%=rs.getString("Nombre")%></td>
 															<td><%=rs.getString("Apellido")%></td>
 																<td><%=rs.getString("Tipos_Afiliacion")%></td>
-																	<td><a href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>"
+																	<td><a class="botonenvio"href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Actualizar</a></td>
-																	<td><a href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>"
-																			>eliminar</a></td>
-																	<td><a href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>"
-																			>Asignar cita</a></td>
-																	<td><a href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>"
-																			>Asignar examen</a></td>
-																	<td><a href="vercitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
-																			>Eliminar citas</a></td>
-																	<td><a href="verExamenes.jsp?Documento=<%=rs.getString("Documento")%>"
-																			>Eliminar examenes</a></td>
+																	<td><a class="botonenvio" href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>">eliminar</a></td>
+																	<td><a class="botonenvio"  href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Asignar</a></td>
+																	<td><a class="botonenvio"  href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Asignar</a></td>
+																	<td><a class="botonenvio"  href="vercitasMedicas.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Eliminar</a></td>
+																	<td><a class="botonenvio"  href="verExamenes.jsp?Documento=<%=rs.getString("Documento")%>"
+																			>Eliminar</a></td>
 																	<% }%></tr></table><%
 
 																	}catch (ClassNotFoundException e) {
@@ -81,6 +88,10 @@
 																	}
 																	}
 																	%>
+																</div>
+																</div>
+																<a class="botonenvio2"  href="../index.html">Regresar</a>
+															</div>
 																</body>
 
 															</html>

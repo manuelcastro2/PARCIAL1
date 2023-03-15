@@ -10,16 +10,16 @@
     </head>
 
     <body>
-        <form action="../BD/insertar.jsp" method="post">
-            <div class="contener-shadow">
-
-                <div class="contener-mediun">
-                    <div>
-                        <label for="">
-                            <h1>REGISTRO</h1>
-                        </label>
-                    </div>
+        <div class="contener-shadow">
+            <div class="contener-mediun">
+                <div>
+                    <label for="">
+                        <h1>REGISTRO</h1>
+                    </label>
+                </div>
+                <form action="../BD/insertar.jsp" method="post">
                     <div class="contener-forward">
+
                         <div>
                             <label for="Nombre">
                                 <p>Nombre</p>
@@ -98,12 +98,17 @@
                             </label>
                         </div>
                         <div>
-                            <button type="submit" name="register" id="INSERTAR">Registrar</button>
+                            <button type="submit" name="register" id="INSERTAR">registrar</button>
                         </div>
                     </div>
+                </form>
+            </div>
+            <form action="login.html">
+                <div class="envio-inicio">
+                    <p>¿Aun no tiene cuenta?</p>
+                    <button type="submit">registro</button>
                 </div>
             </div>
-        </form>
-    </body>
+        </body>
 
-</html>
+    </html>

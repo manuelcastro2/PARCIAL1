@@ -31,58 +31,59 @@
                                  String consulta="select Asignacion,Fecha_Examen,Tipo_Examen,Hora,Ciudad from citas_examenes where Ced=" +cedula;
                                   rs=sentencia.executeQuery(consulta);
                                    %>
-                                <div>
-                                    <table>
-                                        <tr>
-                                            <td>ID</td>
-                                            <td>Fecha cita</td>
-                                            <td>Tipo de Examen </td>
-                                            <td>Hora Examen</td>
-                                            <td>Ciudad</td>
-                                        </tr>
+                                <div class="contener-shadow">
+                                    <div class="contener-mediun">
                                         <div>
                                             <label for="">
-                                                <h1>REGISTRO</h1>
+                                                <h1>VER Y ELIMINAR EXAMENES</h1>
                                             </label>
                                         </div>
-                                        <div>
-                                            <label for="Documento">
+                                        <div class="div-input">
+                                            <label class="bal" for="Documento">
                                                 <p>Documento</p>
                                                 <input type="text" placeholder="Digite
                                                         Documento" name="Documento" id="Documento" disabled
                                                     value="<%out.println(cedula);%>">
                                             </label>
                                         </div>
-                                        <div>
-                                            <% while(rs.next()){ %>
-                                                <form action="" method="post">
-                                                    <div>
-                                                        <tr>
-                                                            <td>
-                                                                <%=rs.getString("Asignacion")%>
-                                                            </td>
-                                                            <td>
-                                                                <%=rs.getString("Fecha_Examen")%>
-                                                            </td>
-                                                            <td>
-                                                                <%=rs.getString("Tipo_Examen")%>
-                                                            </td>
-                                                            <td>
-                                                                <%=rs.getString("Hora")%>
-                                                            </td>
-                                                            <td>
-                                                                <%=rs.getString("Ciudad")%>
-                                                            </td>
-                                                            <td><a href="eliminarexamenes.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
-                                                    </div>
-                                                    
-                                                    <% }%>
-                                                        </tr>
+                                        <div class="contener-forward">
+                                            <table class="tabla">
+                                                <tr class="cabezado">
+                                                    <td>ID</td>
+                                                    <td>Fecha cita</td>
+                                                    <td>Tipo de Examen </td>
+                                                    <td>Hora Examen</td>
+                                                    <td>Ciudad</td>
+                                                    <td>Eliminar</td>
+                                                </tr>
+                                                    <% while(rs.next()){ %>
+                                                        <form action="" method="post">
+                                                                <tr>
+                                                                    <td>
+                                                                        <%=rs.getString("Asignacion")%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%=rs.getString("Fecha_Examen")%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%=rs.getString("Tipo_Examen")%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%=rs.getString("Hora")%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%=rs.getString("Ciudad")%>
+                                                                    </td>
+                                                                    <td><a class="botonenvio" href="eliminarexamenes.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Delete</a></td>
+                                            <% }%>
+                                        </tr>
                                     </table>
-                                    <div>
-                                                     <a href="principal.jsp">Regresar</a>
-                                                      </div>
-                                    </form>
-                        </body>
-
-                        </html>
+                                </div>
+                            </div>
+                            <div class="button2">
+                            <a href="principal.jsp">Regresar</a>
+                            </div>
+                        </div>
+                    </form>
+                </body>
+            </html>

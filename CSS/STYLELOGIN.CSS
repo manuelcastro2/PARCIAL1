@@ -1,40 +1,75 @@
 body {
     background-image: url(http://static.pulzo.com/images-resized/sa-1-1676070515-horizontal-original.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
 .contener-shadow {
     background-color: #006691;
     border-radius: 15px;
-    max-width: 70%;
-    max-height: 300px;
+    width: 700px;
+    height: 300px;
     display: flex;
-    margin-top: 12%;
-    margin-left: 10%;
-    margin-bottom: auto;
+    justify-content: center;
+    align-items: center;
     box-shadow: 5px 5px 50px 5px;
+}
+
+.contener-shadow .envio-register{
+margin-left: -150px;
+margin-right: 75px;
+}
+
+.envio-register p{
+font-weight: 600;
+}
+
+.envio-register button{
+    margin-left: 35px;
+    width: 100px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #40cfff;
+    transition: border 500ms;
+    transition: background-color 500ms;
+    outline: 0 none;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+.envio-register button:hover{
+    background-color: #40cfff;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+.envio-register button:focus{
+    background-color: white;
+    border: 1px solid #2499c7;
+    box-shadow: 0px 0px 10px 0px #40cfff;
 }
 
 .contener-mediun {
     border-radius: 15px;
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    height: 350px;
     background-color: white;
-    margin-top: -70px;
-    margin-left: 410px;
-    margin-bottom: auto;
-    margin-right: auto;
-    padding-bottom: 40px;
     box-shadow: 5px 5px 50px 5px;
+    margin-right:-200px;
 }
 
 .contener-forward {
-    margin-top: 20px;
     text-align: center;
-    padding: 0 45px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,300px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contener-forward input {
@@ -91,9 +126,7 @@ h1 {
 }
 
 .contener-forward button{
-    margin-top: 10px;
-    margin-left: 0%;
-    margin-right: auto;
+    margin-top: 20px;
     width: 100px;
     padding: 7px;
     border-radius: 10px;

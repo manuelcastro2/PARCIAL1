@@ -5,42 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>INICIO DE SESION</title>
-        <link rel="stylesheet" href="../CSS/stylelogin.css">
+        <style>
+            @import '../CSS/stylelogin.css';
+         </style>
     </head>
     <body>
-        <div>
-            <form action="../BD/verificacion.jsp" method="post">
-                <div class="contener-shadow">
-                    <div class="contener-mediun">
+        <div class="contener-shadow">
+            <form action="register.html">
+                <div class="envio-register">
+                    <p>¿Aun no tiene cuenta?</p>
+                    <button type="submit">registro</button>
+                </div>
+            </form>
+            <div class="contener-mediun">
+                <div>
+                    <label for="">
+                        <h1>INICIO SESION</h1>
+                    </label>
+                </div>
+                <div class="contener-forward">
+                    <form action="../BD/verificacion.jsp" method="post">
                         <div>
-                            <label for="">
-                                <h1>INICIO SESION</h1>
+
+                            <label for="Usuario">
+                                <p>Usuario:</p>
+                                <input type="number" placeholder="Cedula"
+                                    name="Usuario" id="Usuario">
                             </label>
                         </div>
-                        <div class="contener-forward">
-                            <div>
-                                <label for="Usuario">
-                                    <p>Usuario:</p>
-                                    <input type="number" placeholder="Cedula"
-                                        name="Usuario" id="Usuario">
-                                </label>
-                            </div>
-                            <div>
-                                <label for="password">
-                                    <p>Contraseña:</p>
-                                    <input type="password"
-                                        placeholder="Contraseña" name="password"
-                                        id="password">
-                                </label>
-                            </div>
-                            <div>
-                                <button type="submit" id="inicio" name="inicio">iniciar
-                                    sesion</button>
-                            </div>
+                        <div>
+                            <label for="password">
+                                <p>Contraseña:</p>
+                                <input type="password"
+                                    placeholder="Contraseña" name="password"
+                                    id="password">
+                            </label>
                         </div>
+                        <div>
+                            <button type="submit" id="inicio" name="inicio">iniciar
+                                sesion</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </form>
-    </body>
-</html>
+        </body>
+    </html>
