@@ -13,6 +13,9 @@
                             <meta name="viewport" content="width=device-width,
                                     initial-scale=1.0">
                             <title>ELIMINAR EXAMENES</title>
+                            <style>
+                               @import '../CSS/styleverexamenes.css';
+                            </style>
                         </head>
 
                         <body>

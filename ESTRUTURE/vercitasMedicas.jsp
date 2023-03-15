@@ -13,7 +13,9 @@
                             <meta name="viewport" content="width=device-width,
                                     initial-scale=1.0">
                             <title>VER Y ELIMINACION DE CITAS</title>
-                            <link rel="stylesheet" href="../CSS/stylevercitas.css">
+                            <style>
+                               @import '../CSS/stylevercitas.css';
+                            </style>
                         </head>
 
                         <body>
@@ -29,39 +31,33 @@
                                  String consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
                                   rs=sentencia.executeQuery(consulta);
                                    %>
-                                   
-                                <div class="contener-shadow">
-                                <div>
-                                    <a href="principal.jsp">Regresar</a>
-                                </div>
-                                   <div class="contener-mediun">
+                                   <form action="" method="post">
+                            <div class="contener-shadow">
+                                <div class="contener-mediun">
                                     <div>
                                         <label for="">
                                             <h1>VER Y ELIMINAR CITAS</h1>
                                         </label>
                                     </div>
-                                        <div>
-                                            <label for="Documento">
-                                                <p>Documento</p>
-                                                <input type="text" placeholder="Digite
+                                    <div class="div-input">
+                                        <label class="bal" for="Documento">
+                                            <p>Documento</p>
+                                            <input type="text" placeholder="Digite
                                                     Documento" name="Documento" id="Documento" disabled
                                                 value="<%out.println(cedula);%>">
-                                            </label>
-                                        </div>
-                                        <div class="contener-forward">
-                                    <table>
-                                        <tr>
-                                            <td>ID</td>
-                                            <td>Fecha cita</td>
-                                            <td>Tipo de cita </td>
-                                            <td>Hora cita</td>
+                                        </label>
+                                    </div>
+                                    <div class="contener-forward">
+                                        <table class="tabla">
+                                            <tr class="cabezado">
+                                                <td>ID</td>
+                                                <td>Fecha cita</td>
+                                                <td>Tipo de cita </td>
+                                                    <td>Hora cita</td>
                                             <td>Ciudad</td>
-                                        </tr>
-                                       
-                                        <div>
+                                                <td>Eliminar</td>
+                                            </tr>
                                             <% while(rs.next()){ %>
-                                                <form action="" method="post">
-                                                    
                                                         <tr>
                                                             <td>
                                                                 <%=rs.getString("Asignacion")%>
@@ -78,16 +74,17 @@
                                                             <td>
                                                                 <%=rs.getString("Ciudad")%>
                                                             </td>
-                                                            <td><a href="eliminarcitas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
-                                                    </div>
-                                                    
+                                                            <td><a class="botonenvio" href="eliminarcitas.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Elminar</a></td>
                                                     <% }%>
                                                         </tr>
                                     </table>
                                    </div>
                                 </div>
+                                 <div class="button2">
+                                    <a href="principal.jsp">Regresar</a>
+                                </div>
                             </div>       
-                                    </form>
+                             </form>
                         </body>
 
                         </html>
