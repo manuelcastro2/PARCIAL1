@@ -47,7 +47,7 @@
 																<td><%=rs.getString("Tipos_Afiliacion")%></td>
 																	<td><a class="botonenvio"href="updatedatos.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Actualizar</a></td>
-																	<td><a class="botonenvio" href="eliminar.jsp?Documento=<%=rs.getString("Documento")%>">eliminar</a></td>
+																	<td><a class="botonenvio" href="../BD/eliminar.jsp?Documento=<%=rs.getString("Documento")%>">eliminar</a></td>
 																	<td><a class="botonenvio"  href="asignacioncitas.jsp?Documento=<%=rs.getString("Documento")%>"
 																			>Asignar</a></td>
 																	<td><a class="botonenvio"  href="asignacionexamenes.jsp?Documento=<%=rs.getString("Documento")%>"

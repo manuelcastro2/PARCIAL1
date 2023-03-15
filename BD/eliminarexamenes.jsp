@@ -17,6 +17,6 @@ PreparedStatement ps;
 String ID =  request.getParameter("Asignacion");
 String consulta="delete from citas_examenes where Asignacion="+ID;
 filas=sentencia.executeUpdate(consulta);
-response.sendRedirect("principal.jsp");
+response.sendRedirect("../ESTRUTURE/principal.jsp");
 
 %>

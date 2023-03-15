@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: white;
+}
+.flotante{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 1px 1px 3px 1px;
+}
+
+.logo {
+    margin-left: 25px;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #03045E;
+}
+
+.logo h1 p {
+    margin: 0;
+    padding: 0;
+}
+
+.logo h1 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.logo p {
+    font-weight: 700;
+}
+
+.sub-encabezado {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.direccion {
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #023E8A;
+    font-size: 14px;
+    transition: color 300ms;
+}
+
+.direccion:hover {
+    color: #0096C7;
+}
+
+.inicio-sesion {
+    border-radius: 20px;
+    padding: 6px 25px;
+    margin-left: 35px;
+    background-color: #03045E;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 400ms;
+    transition: background-color 400ms;
+    transition: border 400ms;
+    border: 1px solid #03045E;
+}
+
+.inicio-sesion:hover {
+    border: 1px solid #03045E;
+    color: #03045E;
+    background-color: white;
+}
+
+.inicio-sesion:focus {
+    border: 1px solid #023E8A;
+    color: #023E8A;
+    background-color: white;
+    box-shadow: 1px 1px 5px 1px #03045E;
+}
+
+.navegacion {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00B4D8;
+}
+
+.navegacion ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 4px;
+    border: none;
+}
+.navegacion a:hover{
+border-bottom: 2px solid white;
+}
+
+.imagen{
+    background-image: url("../IMG/dotor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
