@@ -28,7 +28,12 @@ conexion = DriverManager.getConnection(
 sentencia= conexion.createStatement();
 PreparedStatement ps;
 String cedula =  request.getParameter("Documento");
-String consulta="select * from usuarios where Documento="+cedula;
+String Tipo = request.getParameter("Tipo");
+if(cedula!=null){
+    String consulta="select * from usuarios where Documento='"+cedula+"'and tipo_doc='"+Tipo+"'";
+}else{
+    response.sendRedirect("../ESTRUTURE/asignacioncitasmedio.html");
+}
 rs=sentencia.executeQuery(consulta);
 while(rs.next()){
 

@@ -1,0 +1,143 @@
+body {
+    background-image: url(https://rtvc-informativo.s3.amazonaws.com/Diferencias_eps_1-1000x600.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.contener-shadow {
+    background-color: #006691;
+    border-radius: 15px;
+    width: 800px;
+    height: 200px;
+    box-shadow: 5px 5px 50px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contener-shadow .envio-inicio{
+font-weight: 500;
+margin-right: 80px;
+
+}
+
+.envio-inicio button{
+    margin-left: 30px;
+    width: 100px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #40cfff;
+    transition: border 500ms;
+    transition: background-color 500ms;
+    outline: 0 none;
+}
+
+.envio-inicio button:hover{
+    background-color: #40cfff;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+.envio-inicio button:focus{
+    background-color: #2499c7;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px #40cfff;
+}
+
+.contener-mediun {
+    border-radius: 15px;
+    width: 600px;
+    height: 350px;
+    background-color: white;
+    margin-top: -70px;
+    margin-left: 60px;
+    margin-bottom: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 50px 5px;
+}
+
+.contener-forward {
+    text-align: center;
+    padding: 20px;
+}
+
+.contener-forward input {
+    max-width: 200px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #2499c7;
+    transition: border 500ms;
+    transition: max-width 500ms;
+    outline: 0 none;
+}
+
+.contener-forward input:focus {
+    border: 1px solid #40cfff;
+    max-width: 210px;
+    outline: 0 none;
+    box-shadow: 0px 0px 10px 0px #2499c7;
+}
+
+.contener-forward input:hover {
+    border: 1px solid #40cfff;
+    outline: 0 none;
+}
+
+.contener-forward select {
+    max-width: 200px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #2499c7;
+    transition: border 500ms;
+    transition: max-width 500ms;
+    outline: 0 none;
+}
+
+.contener-forward select:focus {
+    border: 1px solid #40cfff;
+    max-width: 210px;
+    outline: 0 none;
+    box-shadow: 0px 0px 10px 0px #2499c7;
+}
+
+.contener-forward select:hover {
+    border: 1px solid #40cfff;
+    outline: 0 none;
+}
+
+.contener-forward label {
+    font-weight: 470;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 1000;
+}
+
+.contener-forward button{
+    margin-top: 10px;
+    margin-right: auto;
+    width: 100px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #2499c7;
+    transition: border 500ms;
+    transition: background-color 500ms;
+    outline: 0 none;
+    font-weight: 540;
+}
+
+.contener-forward button:hover{
+    background-color: #2499c7;
+    border: 1px solid #40cfff;
+    box-shadow: 0px 0px 10px 0px #2499c7;
+}
+.contener-forward button:focus{
+    background-color: #40cfff;
+    border: 1px solid #2499c7;
+    box-shadow: 0px 0px 10px 0px #2499c7;
+}
