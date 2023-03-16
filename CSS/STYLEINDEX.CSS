@@ -318,8 +318,13 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-
+.boton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 200px;
+    font-size: 15px;
+}
 .enlace {
+    border: none;
     color: #03045E;
     font-weight: 700;
     text-decoration: none;
@@ -327,6 +332,7 @@ body {
     text-align: right;
     margin-right: 40px;
     margin-bottom: 25px;
+    background-color:transparent;
 }
 
 .enlace:hover {

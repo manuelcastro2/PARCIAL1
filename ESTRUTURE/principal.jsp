@@ -37,7 +37,7 @@
 											<table class="tabla"> 
 												<tr class="cabezado">
 											<td>Documento</td><td>Tipo de documento</td><td>Nombre</td><td>Apellido</td><td>Afiliacion</td><td>Actualizar Datos</td><td>Eliminar Usuario</td>
-											<td>Asignar cita</td><td>Asignar examen</td><td>Eliminar citas</td><td>Eliminar examenes</td>
+											<td>Eliminar citas</td><td>Eliminar examenes</td>
 										</tr><%
 											while(rs.next()) { %>
 											<tr><td><%=rs.getString("Documento")%></td>
