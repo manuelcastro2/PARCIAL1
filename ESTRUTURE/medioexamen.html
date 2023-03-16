@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/stylemediunexamen.css">
-    <title>Document</title>
+    <title>VALIDACION DE DATOS</title>
 </head>
 <body>
 <div class="contener-shadow">
     <div class="contener-mediun">
         <div class="contener-forward">
             <h1>VALIDACION DE DATOS</h1>
-            <form action="asignacioncitas.jsp" method="post">
-                    <label for="Tipo">
+            <form action="asignacionexamenes.jsp" method="post">
+                    <label for="Tipo_cedula">
                         <p>Tipo documento</p>
-                        <select name="Tipo" id="Tipo">
+                        <select name="Tipo_cedula" id="Tipo_cedula">
                             <option value="R.C.">Registro civil</option>
                             <option value="T.I.">Targeta identida</option>
                             <option value="C.C.">Cedula</option>
@@ -26,7 +26,7 @@
                         <p>Documento</p>
                         <input type="number" placeholder="Digite Documento" name="Documento" id="Documento">
                     </label><br>
-                <button type="submit">Validad</button>
+                <button type="submit">Validar</button>
             </form>
             </div>
         </div>

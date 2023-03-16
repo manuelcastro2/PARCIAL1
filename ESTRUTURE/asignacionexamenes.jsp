@@ -1,11 +1,6 @@
-<%@ page import="java.sql.Connection"%>
-<%@ page import="java.sql.Statement"%>
-<%@ page import="java.sql.DriverManager"%>
-<%@ page import="java.sql.SQLException"%>
-<%@ page import="java.sql.PreparedStatement"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,19 +16,13 @@ Connection conexion=null;
 Statement  sentencia=null;
 ResultSet rs=null;
 int filas=0;
+	
 Class.forName("com.mysql.jdbc.Driver");
-conexion = DriverManager.getConnection(
-				"jdbc:mysql://localhost/parcial", "root",
-				"");
+conexion = DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
 sentencia= conexion.createStatement();
 PreparedStatement ps;
 String cedula =  request.getParameter("Documento");
-String Tipo = request.getParameter("Tipo");
-if(cedula!=null){
-    String consulta="select * from usuarios where Documento='"+cedula+"'and tipo_doc='"+Tipo+"'";
-}else{
-    response.sendRedirect("../ESTRUTURE/asignacioncitasmedio.html");
-}
+    String consulta="select * from usuarios where Documento="+cedula;
 rs=sentencia.executeQuery(consulta);
 while(rs.next()){
 
@@ -41,7 +30,7 @@ while(rs.next()){
     <form method="post" action="">
         <div class="contener-shadow">
             <div class="button2">
-                <a href="principal.jsp">Regresar</a>
+                <a href="../index.html">Regresar</a>
             </div>
             <div class="contener-mediun">
                 <div>
@@ -53,19 +42,19 @@ while(rs.next()){
                     <div>
                         <label for="Documento">
                             <p>Documento</p>
-                            <input type="text" placeholder="Digite Documento" name="Documento" id="Documento" disabled value="<%=rs.getString("Documento")%>">
+                            <input type="text" name="Documento" id="Documento" value="<%=rs.getString("Documento")%>">
                         </label>
                     </div>
                     <div>
                         <label for="Nombre">
                             <p>Nombre</p>
-                            <input type="text" placeholder="Digite Nombre" name="Nombre" id="Nombre" disabled value="<%=rs.getString("Nombre")%>">
+                            <input type="text" placeholder="Digite Nombre" name="Nombre" id="Nombre"  value="<%=rs.getString("Nombre")%>">
                         </label>
                     </div>
                     <div>
                         <label for="Apellido">
                             <p>Apellido</p>
-                            <input type="text" placeholder="Digite Apellido" name="Apellido" id="Apellido" disabled value="<%=rs.getString("Apellido")%>">
+                            <input type="text" placeholder="Digite Apellido" name="Apellido" id="Apellido" value="<%=rs.getString("Apellido")%>">
                         </label>
                     </div>
                     <%}%>
@@ -128,6 +117,6 @@ if(ciudad!=null&&Tcita!=null&&fecha_cita!=null&&cedula!=null){
 		consulta += "('" +fecha_cita+ "','" +Tcita+ "','"+Hora+"','"+ciudad+"','"+cedula+"')";
 filas=sentencia.executeUpdate(consulta);
 
-response.sendRedirect("principal.jsp");
+response.sendRedirect("../index.jsp");
 }
 %>
