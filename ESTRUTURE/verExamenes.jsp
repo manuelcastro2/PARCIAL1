@@ -29,7 +29,10 @@
                                 sentencia=conexion.createStatement(); 
                                 PreparedStatement ps; 
                                 String cedula=request.getParameter("Documento");
-                                 String consulta="select Asignacion,Fecha_Examen,Tipo_Examen,Hora,Ciudad from citas_examenes where Ced=" +cedula;
+                                String consulta;
+                                 if(cedula!=null){
+                                    consulta="select Asignacion,Fecha_Examen,Tipo_Examen,Hora,Ciudad from citas_examenes where Ced=" +cedula;
+                                 }
                                   rs=sentencia.executeQuery(consulta);
                                    %>
                                    <!--contenedor que encierra todo-->

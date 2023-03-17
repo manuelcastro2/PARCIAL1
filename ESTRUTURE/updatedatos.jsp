@@ -29,7 +29,10 @@ conexion = DriverManager.getConnection(
 sentencia= conexion.createStatement();
 PreparedStatement ps;
 String cedula =  request.getParameter("Documento");
-String consulta="select * from usuarios where Documento="+cedula;
+String consulta;
+if(cedula!=null){
+    consulta="select * from usuarios where Documento="+cedula;
+}
 rs=sentencia.executeQuery(consulta);
 
 while(rs.next()){

@@ -29,7 +29,10 @@
                                 sentencia=conexion.createStatement(); 
                                 PreparedStatement ps; 
                                 String cedula=request.getParameter("Documento");
-                                 String consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
+                                String consulta;
+                                 if(cedula!=null){
+                                    consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
+                                 }
                                   rs=sentencia.executeQuery(consulta);
                                    %>
                                    <form action="" method="post">

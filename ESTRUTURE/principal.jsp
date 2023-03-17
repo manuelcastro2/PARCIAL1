@@ -27,7 +27,6 @@
 
 								conexion= DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
 								sentencia= conexion.createStatement();
-
 								String consultaSQL="select Documento,tipo_doc,Nombre,Apellido,Tipos_Afiliacion from usuarios";
 								rs=sentencia.executeQuery(consultaSQL);
 
