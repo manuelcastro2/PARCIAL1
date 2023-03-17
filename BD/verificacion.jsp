@@ -23,11 +23,13 @@ Connection conexion = null;
 		sentencia = conexion.createStatement();
 ResultSet rs;
 //hago la consulta de la base de datos pra hacer el inicio de sesion, la validacion
-		rs=sentencia.executeQuery("SELECT * FROM usuarios WHERE Documento='"+cedula+"' and password='"+password+"'");
+		if(cedula!=null&&password!=null){
+			rs=sentencia.executeQuery("SELECT * FROM usuarios WHERE Documento='"+cedula+"' and password='"+password+"'");
 if(rs.next()){
 session.setAttribute("Documento",cedula);
    response.sendRedirect("../ESTRUTURE/principal.jsp"); 
    rs.getInt("Documento");
+		}
 }	 
 
 

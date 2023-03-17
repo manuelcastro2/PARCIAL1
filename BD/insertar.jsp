@@ -27,11 +27,13 @@ Statement  sentencia=null;
 
 		sentencia = conexion.createStatement();
 //hago la insertacion de la informacion a la base de datos
-		String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellido,Correo,Telefono,password,Fecha_Nac,Expediccion_Ced,Tipos_Afiliacion ) values ";
+		if(cedula!=null&&Tipo_doc!=null&&Nombre!=null&&Apellido!=null&&Correo!=null&&telefono!=null&&password!=null&&fecha_nac!=null&&Expedicion_ced!=null&&Afiliacion!=null){
+			String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellido,Correo,Telefono,password,Fecha_Nac,Expediccion_Ced,Tipos_Afiliacion ) values ";
 		consultaSQL += "('" + cedula + "','" + Tipo_doc + "','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','"+afiliacion+"')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
 		 response.sendRedirect("../index.html");
+		}
 
 	} catch (ClassNotFoundException e) {
 

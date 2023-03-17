@@ -16,8 +16,10 @@ conexion = DriverManager.getConnection(
 sentencia= conexion.createStatement();
 PreparedStatement ps;
 String ID =  request.getParameter("Asignacion");
-String consulta="delete from citas_examenes where Asignacion="+ID;
+if(ID!=null){
+	String consulta="delete from citas_examenes where Asignacion="+ID;
 filas=sentencia.executeUpdate(consulta);
 response.sendRedirect("../ESTRUTURE/principal.jsp");
+}
 
 %>
