@@ -29,7 +29,7 @@
                                 sentencia=conexion.createStatement(); 
                                 PreparedStatement ps; 
                                 String cedula=request.getParameter("Documento");
-                                String consulta;
+                                String consulta=null;
                                  if(cedula!=null){
                                     consulta="select Asignacion,Fehca_cita,Tipo_cita,Hora,Ciudad from citas_medicas where Ced=" +cedula;
                                  }

@@ -22,10 +22,11 @@ Class.forName("com.mysql.jdbc.Driver");
 conexion = DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
 sentencia= conexion.createStatement();
 PreparedStatement ps;
-String consulta;
+String consulta=null;
+String tipo=request.getParameter("Tipo_cedula");
 String cedula =  request.getParameter("Documento");
     if(cedula!=null){
-consulta="select * from usuarios where Documento="+cedula;
+consulta="SELECT * FROM usuarios WHERE Documento='"+cedula+"' and tipo_doc='"+tipo+"'";
     }
 rs=sentencia.executeQuery(consulta);
 while(rs.next()){
