@@ -10,29 +10,34 @@
          </style>
     </head>
     <body>
+        <!--div que contiene tood-->
         <div class="contener-shadow">
+            <!--boton que me envia a la pagina register-->
             <form action="register.html">
                 <div class="envio-register">
                     <p>¿Aun no tiene cuenta?</p>
                     <button type="submit">registro</button>
                 </div>
             </form>
+            <!--div del medio que contiene el div superior-->
             <div class="contener-mediun">
                 <div>
                     <label for="">
                         <h1>INICIO SESION</h1>
                     </label>
                 </div>
+                <!--div que contiene los inputs-->
                 <div class="contener-forward">
                     <form action="../BD/verificacion.jsp" method="post">
+                        <!--inout y label del usuario (cedula)-->
                         <div>
-
                             <label for="Usuario">
                                 <p>Usuario:</p>
-                                <input type="number" placeholder="Cedula"
+                                <input type="number" placeholder="Digite Cedula"
                                     name="Usuario" id="Usuario">
                             </label>
                         </div>
+                        <!--input y label de la contraseña-->
                         <div>
                             <label for="password">
                                 <p>Contraseña:</p>
@@ -41,6 +46,7 @@
                                     id="password">
                             </label>
                         </div>
+                        <!--boton de envio de los datos al jsp-->
                         <div>
                             <button type="submit" id="inicio" name="inicio">iniciar
                                 sesion</button>

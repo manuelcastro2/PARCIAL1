@@ -19,6 +19,7 @@
                         </head>
 
                         <body>
+                        <!--creo la conexion y la consulta de datos-->
                             <% Connection conexion=null; 
                             Statement sentencia=null; 
                             ResultSet rs=null;
@@ -31,13 +32,16 @@
                                  String consulta="select Asignacion,Fecha_Examen,Tipo_Examen,Hora,Ciudad from citas_examenes where Ced=" +cedula;
                                   rs=sentencia.executeQuery(consulta);
                                    %>
+                                   <!--contenedor que encierra todo-->
                                 <div class="contener-shadow">
+                                <!--contenedor que encierra un div-->
                                     <div class="contener-mediun">
                                         <div>
                                             <label for="">
                                                 <h1>VER Y ELIMINAR EXAMENES</h1>
                                             </label>
                                         </div>
+                                        <!--input donde me muesta el documento-->
                                         <div class="div-input">
                                             <label class="bal" for="Documento">
                                                 <p>Documento</p>
@@ -46,6 +50,7 @@
                                                     value="<%out.println(cedula);%>">
                                             </label>
                                         </div>
+                                        <!--creo una tabla donde mostrare informacion y la llamado con rs.getString-->
                                         <div class="contener-forward">
                                             <table class="tabla">
                                                 <tr class="cabezado">
@@ -74,12 +79,14 @@
                                                                     <td>
                                                                         <%=rs.getString("Ciudad")%>
                                                                     </td>
+                                                                    <!--boton dondde redirecciona al eliminar el examen-->
                                                                     <td><a class="botonenvio" href="../BD/eliminarexamenes.jsp?Asignacion=<%=rs.getString("Asignacion")%>">Delete</a></td>
                                             <% }%>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
+                            <!--boton donde me redireciona  a la pagina anterior-->
                             <div class="button2">
                             <a href="principal.jsp">Regresar</a>
                             </div>

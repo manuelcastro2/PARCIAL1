@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<!--creo la conexion-->
 <%
 Connection conexion=null;
 Statement  sentencia=null;
@@ -30,6 +31,7 @@ String consulta="SELECT * FROM usuarios WHERE Documento="+cedula;
  rs=sentencia.executeQuery(consulta);
 while(rs.next()){
 %>
+<!--muestro la iformacion y hay inputs modifiables-->
     <form method="post" action="">
         <div class="contener-shadow">
         <div class="button2">
@@ -100,6 +102,7 @@ while(rs.next()){
                         </label>
                     </div>
                     <div>
+                    <!--envio la informacion-->
                         <button type="submit" name="asignarcita" id="asignarcita">Cita</button>
                     </div>
                 </div>
@@ -109,6 +112,7 @@ while(rs.next()){
 </body>
 
 </html>
+<!--hago el envio de la base de datos-->
 <%  
 String ciudad =  request.getParameter("Tipo_ciu");
 String Tcita =  request.getParameter("Tipocita");

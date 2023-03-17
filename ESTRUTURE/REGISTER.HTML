@@ -10,7 +10,9 @@
     </head>
 
     <body>
+        <!--div que contiene todo-->
         <div class="contener-shadow">
+            <!--div que contiene al div superior-->
             <div class="contener-mediun">
                 <div>
                     <label for="">
@@ -18,8 +20,9 @@
                     </label>
                 </div>
                 <form action="../BD/insertar.jsp" method="post">
+                    <!--div que contiene los inputs, selects-->
                     <div class="contener-forward">
-
+                        <!--inout de nombre-->
                         <div>
                             <label for="Nombre">
                                 <p>Nombre</p>
@@ -27,6 +30,7 @@
                                     name="Nombre" id="Nombre">
                             </label>
                         </div>
+                        <!--inout de apellido-->
                         <div>
                             <label for="Apellido">
                                 <p>Apellido</p>
@@ -34,6 +38,7 @@
                                     name="Apellido" id="Apellido">
                             </label>
                         </div>
+                        <!--select del tipo de documento-->
                         <div>
                             <label for="Tipo">
                                 <p>Tipo documento</p>
@@ -45,6 +50,7 @@
                                 </select>
                             </label>
                         </div>
+                        <!--input del la cedula-->
                         <div>
                             <label for="Documento">
                                 <p>Documento</p>
@@ -52,6 +58,7 @@
                                     Documento" name="Documento" id="Documento">
                             </label>
                         </div>
+                        <!--input de la expediccion de la cedula-->
                         <div>
                             <label for="Expedicion_ced">
                                 <p>Expedicion de cedula</p>
@@ -59,6 +66,7 @@
                                     id="Expedicion_ced">
                             </label>
                         </div>
+                        <!--input del correo-->
                         <div>
                             <label for="Correo">
                                 <p>Correo</p>
@@ -66,6 +74,7 @@
                                     name="Correo" id="Correo">
                             </label>
                         </div>
+                        <!--input del telefono-->
                         <div>
                             <label for="Telefono">
                                 <p>Telefono</p>
@@ -74,6 +83,7 @@
                                     name="Telefono" id="Telefono">
                             </label>
                         </div>
+                        <!--input del password-->
                         <div>
                             <label for="password">
                                 <p>Contraseña</p>
@@ -81,6 +91,7 @@
                                     Contraseña" name="password" id="password">
                             </label>
                         </div>
+                        <!--input de la fecha-->
                         <div>
                             <label for="fecha_nac">
                                 <p>Fecha nacimiento</p>
@@ -88,6 +99,7 @@
                                     id="fecha_nac">
                             </label>
                         </div>
+                        <!--select del tipo que regimen pertenece-->
                         <div>
                             <label for="Afiliacion">
                                 <p>Tipo de afiliacion</p>
@@ -97,12 +109,14 @@
                                 </select>
                             </label>
                         </div>
+                        <!--boton de envio-->
                         <div>
                             <button type="submit" name="register" id="INSERTAR">registrar</button>
                         </div>
                     </div>
                 </form>
             </div>
+            <!--boton donde me redirecciona a la pagina del registro-->
             <form action="login.html">
                 <div class="envio-inicio">
                     <p>¿Ya tienes cuenta?</p>

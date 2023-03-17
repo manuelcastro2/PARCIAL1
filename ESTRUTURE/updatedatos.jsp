@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<!--creo la conexion y hago la consulta de los datos-->
 <%
 Connection conexion=null;
 Statement  sentencia=null;
@@ -35,6 +36,8 @@ while(rs.next()){
 
 
 %>
+<!--muestro los datos en diferentes inputs y creo varios contendor donde encierran la informacion-->
+<!--ademas tmabien hay inputs bloqueas donde no se puede modificar la informacion-->
 <form action="" method="post">
         <div class="contener-shadow">
         <div class="mv">
@@ -118,6 +121,7 @@ while(rs.next()){
 </body>
 
 </html>
+<!--aqui almaceno la informacion modiificada y la envio a la base de datos para que actulize la informacion-->
 <%
 String Expedicion_ced =  request.getParameter("Expedicion_ced");
 String Nombre =  request.getParameter("Nombre");

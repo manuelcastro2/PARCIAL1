@@ -19,6 +19,7 @@
                         </head>
 
                         <body>
+                        <!--creo la conexion y consulto la informacion-->
                             <% Connection conexion=null; 
                             Statement sentencia=null; 
                             ResultSet rs=null;
@@ -32,13 +33,16 @@
                                   rs=sentencia.executeQuery(consulta);
                                    %>
                                    <form action="" method="post">
+                                   <!--contenedor que contiene todo-->
                             <div class="contener-shadow">
+                            <!--contenedor intermedio-->
                                 <div class="contener-mediun">
                                     <div>
                                         <label for="">
                                             <h1>VER Y ELIMINAR CITAS</h1>
                                         </label>
                                     </div>
+                                    <!--muestro en el inout la cedula-->
                                     <div class="div-input">
                                         <label class="bal" for="Documento">
                                             <p>Documento</p>
@@ -47,6 +51,7 @@
                                                 value="<%out.println(cedula);%>">
                                         </label>
                                     </div>
+                                    <!--contenedor que tiene la tabla de la informacion-->
                                     <div class="contener-forward">
                                         <table class="tabla">
                                             <tr class="cabezado">
@@ -80,6 +85,7 @@
                                     </table>
                                    </div>
                                 </div>
+                                <!--boton que me redirecciona a la pagina principal-->
                                  <div class="button2">
                                     <a href="principal.jsp">Regresar</a>
                                 </div>
