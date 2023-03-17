@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://panajobs.com/wp-content/uploads/2017/11/ausencia-ni%C3%B1os-de-2-a%C3%B1os.jpg);
+    background-image: url("../IMG/fondo-examen.jpg");
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
