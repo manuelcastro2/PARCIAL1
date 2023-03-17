@@ -611,7 +611,7 @@ body {
 }
 
 .caja-cuadro:hover {
- box-shadow: 1px 1px 10px 1px;
+    box-shadow: 1px 1px 10px 1px;
 }
 
 .img1-cuadro {
@@ -646,7 +646,76 @@ body {
     height: 200px;
 }
 
-.caja-cuadro{
+.caja-cuadro {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.contener-pie {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 550px;
+    background-color: #03045E;
+}
+
+.pie-interior {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-p {
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.pie-interior li {
+    padding: 10px 0;
+}
+
+.division {
+    background-color: white;
+    border-top: 1px solid white;
+    padding: 0;
+    margin: 20px 0;
+    width: 90%;
+}
+
+.espandir {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.icono {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.icono-imagen1 {
+    background-image: url("../IMG/icono-instagran.png");
+}
+
+.icono-imagen2 {
+    background-image: url("../IMG/icono-twiter.png");
+}
+
+.icono-imagen3{
+    background-image: url("../IMG/icono-youtube.jpg");
+}
+
+.caja-redes{
+    display: flex;
 }

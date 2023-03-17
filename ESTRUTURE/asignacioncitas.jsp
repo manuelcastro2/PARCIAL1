@@ -119,7 +119,7 @@ if(ciudad!=null && Tcita!=null && fecha_cita!=null&&cedula!=null){
 		consulta += "('"+fecha_cita+ "','" +Tcita+ "','"+Hora+"','"+ciudad+"','"+cedula+"')";
 filas=sentencia.executeUpdate(consulta);
 
-response.sendRedirect("../index.jsp");
+response.sendRedirect("../index.html");
 }else{
     out.println("no se enviaron  los datos");
 }
