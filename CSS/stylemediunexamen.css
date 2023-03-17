@@ -1,5 +1,5 @@
 body {
-    background-image: url(../IMG/fondo-medio-examen.jpg);
+    background-image: url("../IMG/fondo-medio-examen.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
