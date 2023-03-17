@@ -5,6 +5,7 @@
 <%@ page import="java.sql.PreparedStatement"%>
 <%@ page import="java.sql.*"%>
 <%
+//creo la conexion y hago la eliminacion del usuario atrevez de la llave  principal
 Connection conexion=null;
 Statement  sentencia=null;
 int filas=0;

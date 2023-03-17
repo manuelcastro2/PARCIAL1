@@ -3,7 +3,7 @@
 <%@ page import="java.sql.DriverManager"%>
 <%@ page import="java.sql.SQLException"%>
 <%
-
+//hago la conexion y traigo la informacion de la pagina html o jsp que me envia
 String cedula =  request.getParameter("Documento");
 String  Tipo_doc=  request.getParameter("Tipo");
 String Expedicion_ced =  request.getParameter("Expedicion_ced");
@@ -26,7 +26,7 @@ Statement  sentencia=null;
 	conexion = DriverManager.getConnection("jdbc:mysql://localhost/parcial", "root","");
 
 		sentencia = conexion.createStatement();
-
+//hago la insertacion de la informacion a la base de datos
 		String consultaSQL = "INSERT INTO usuarios (Documento,tipo_doc,Nombre, Apellido,Correo,Telefono,password,Fecha_Nac,Expediccion_Ced,Tipos_Afiliacion ) values ";
 		consultaSQL += "('" + cedula + "','" + Tipo_doc + "','"+Nombre+"','"+Apellido+"','"+Correo+"','"+telefono+"','"+password+"','"+fecha_nac+"','"+Expedicion_ced+"','"+afiliacion+"')";
 

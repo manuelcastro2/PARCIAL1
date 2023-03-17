@@ -4,7 +4,7 @@
 <%@ page import="java.sql.SQLException"%>
 <%@ page import="java.sql.*"%>
 <%
-
+//hago la conexion y recibo la informacion enviada atrevez de un jsp o html
 String cedula =  request.getParameter("Usuario");
 String password =  request.getParameter("password");
 
@@ -22,6 +22,7 @@ Connection conexion = null;
 
 		sentencia = conexion.createStatement();
 ResultSet rs;
+//hago la consulta de la base de datos pra hacer el inicio de sesion, la validacion
 		rs=sentencia.executeQuery("SELECT * FROM usuarios WHERE Documento='"+cedula+"' and password='"+password+"'");
 if(rs.next()){
 session.setAttribute("Documento",cedula);
